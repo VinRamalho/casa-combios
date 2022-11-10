@@ -18,6 +18,12 @@ header {
   animation: up 0.8s;
 }
 
+.fixed {
+  position: sticky;
+  top: 30px;
+  z-index: 999;
+}
+
 button,
 h2 {
   animation: up 1.2s;
