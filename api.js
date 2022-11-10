@@ -1,9 +1,10 @@
 const fetchCurrency = async (currency) => {
+    displayLoading()
     const result = await fetch(`https://api.exchangerate.host/latest?base=${currency}`);
     const data = await result.json();
     handleRates(data);
     renderBase(data);
-
+    hideLoading()
 }
 
 // PHP

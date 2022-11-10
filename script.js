@@ -62,6 +62,20 @@ const clearList = () => {
     ul.innerHTML = ""
 }
 
+function displayLoading() {
+    const loading = document.getElementById('loading');
+    loading.classList.add("spinner-grow");
+    // to stop loading after some time
+    setTimeout(() => {
+        loading.classList.remove("spinner-grow");
+    }, 10000);
+}
+
+function hideLoading() {
+    const loading = document.getElementById('loading');
+    loading.classList.remove("spinner-grow");
+}
+
 
 setupHandlers()
 options()
